@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% for item in data %}
+<ul>
+  {{ item.station_id }} : {{ item.num_bikes_available }}
+</ul>
+{% endfor %}
