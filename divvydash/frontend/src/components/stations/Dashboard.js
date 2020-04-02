@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react';
+import Form from './Form';
+import Stations from './Stations';
 
-export class Dashboard extends Component{
-  render() {
-    return(
-      <div>
-
-      </div>
-    )
-  }
+export default function Dashboard(){
+  return(
+    <Fragment>
+      <Form />
+      <Stations />
+    </Fragment>
+  )
 }
-
-export default Dashboard

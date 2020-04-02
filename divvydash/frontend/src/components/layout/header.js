@@ -9,8 +9,7 @@ export class Header extends Component{
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <a className="navbar-brand" href="#"> Divvy Bike Dashboard </a>
-          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-          </ul>
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
         </div>
       </nav>
     )
