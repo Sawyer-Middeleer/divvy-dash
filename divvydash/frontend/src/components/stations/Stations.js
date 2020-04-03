@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getStations } from '../../actions/stations';
+import { getStations, deleteStation } from '../../actions/stations';
  
 export class Stations extends Component {
   static propTypes = {
-    stations: PropTypes.array.isRequired
+    stations: PropTypes.array.isRequired,
+    getStations: PropTypes.func.isRequired,
+    deleteStation: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -33,7 +35,7 @@ export class Stations extends Component {
                 <td>{station.num_bikes_available}</td>
                 <td>{station.num_docks_available}</td>
                 <td>{station.last_updated}</td>
-                <td><button className='btn btn-danger btn-sm'>Delete</button></td>
+                <td><button onClick={this.props.deleteStation.bind(this, station.id)} className='btn btn-danger btn-sm'>Delete</button></td>
               </tr>
             ))}
           </tbody>
@@ -47,4 +49,4 @@ const mapStateToProps = state => ({
   stations: state.stations.stations
 })
 
-export default connect(mapStateToProps, { getStations })(Stations);
+export default connect(mapStateToProps, { getStations, deleteStation })(Stations);

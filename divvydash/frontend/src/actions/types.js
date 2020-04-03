@@ -1,1 +1,5 @@
 export const GET_STATIONS = 'GET_STATIONS';
+export const DELETE_STATION = 'DELETE_STATION';
+export const ADD_STATION = 'ADD_STATION';
+export const GET_ERRORS = 'GET_ERRORS';
+export const CREATE_MESSAGE = 'CREATE_MESSAGE';

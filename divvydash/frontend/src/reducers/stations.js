@@ -1,8 +1,8 @@
-import { GET_STATIONS } from '../actions/types.js';
+import { GET_STATIONS, DELETE_STATION, ADD_STATION } from '../actions/types.js';
 
 const initialState = {
     stations: []
-}
+};
 
 export default function(state = initialState, action) {
     switch(action.type){
@@ -10,6 +10,16 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 stations: action.payload
+            };
+        case DELETE_STATION:
+            return {
+                ...state,
+                stations: state.stations.filter(station => station.id !== action.payload)
+            };
+        case ADD_STATION:
+            return {
+                ...state,
+                stations: [...state.stations, action.payload]
             };
         default:
             return state;
