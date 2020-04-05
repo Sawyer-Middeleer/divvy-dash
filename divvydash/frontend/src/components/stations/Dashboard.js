@@ -5,8 +5,8 @@ import Stations from './Stations';
 export default function Dashboard(){
   return(
     <Fragment>
-      <Form />
       <Stations />
+      <Form />
     </Fragment>
   )
 }

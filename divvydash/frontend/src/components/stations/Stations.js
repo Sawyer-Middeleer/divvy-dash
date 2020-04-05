@@ -34,7 +34,7 @@ export class Stations extends Component {
                 <td>{station.station_id}</td>
                 <td>{station.num_bikes_available}</td>
                 <td>{station.num_docks_available}</td>
-                <td>{station.last_updated}</td>
+                <td>{station.last_reported}</td>
                 <td><button onClick={this.props.deleteStation.bind(this, station.id)} className='btn btn-danger btn-sm'>Delete</button></td>
               </tr>
             ))}

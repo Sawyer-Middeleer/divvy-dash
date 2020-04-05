@@ -15,7 +15,7 @@ export class Alerts extends Component {
            if(error.msg.station_id) alert.error(`Station ID: ${error.msg.station_id.join()}`);
            if(error.msg.num_bikes_available) alert.error(`Bikes Available: ${error.msg.num_bikes_available.join()}`);
            if(error.msg.num_docks_available) alert.error(`Docks Available: ${error.msg.num_docks_available.join()}`);
-           if(error.msg.last_updated) alert.error(`Last Updated: ${error.msg.last_updated.join()}`);
+           if(error.msg.last_reported) alert.error(`Last Updated: ${error.msg.last_reported.join()}`);
        }
 
        if(message !== prevProps.message) {

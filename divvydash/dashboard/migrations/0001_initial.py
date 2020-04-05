@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('station_id', models.CharField(max_length=50)),
                 ('num_bikes_available', models.IntegerField()),
                 ('num_docks_available', models.IntegerField()),
-                ('last_updated', models.DateTimeField()),
+                ('last_reported', models.DateTimeField()),
             ],
         ),
     ]

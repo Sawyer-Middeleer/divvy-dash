@@ -8,7 +8,7 @@ export class Form extends Component{
     station_id: '',
     num_bikes_available: '',
     num_docks_available: '',
-    last_updated: ''
+    last_reported: ''
   };
 
 static propTypes = { 
@@ -19,19 +19,19 @@ onChange = e => this.setState({ [e.target.name]: e.target.value });
 
 onSubmit = e => {
   e.preventDefault();
-  const { station_id, num_bikes_available, num_docks_available, last_updated } = this.state;
-  const station = { station_id, num_bikes_available, num_docks_available, last_updated };
+  const { station_id, num_bikes_available, num_docks_available, last_reported } = this.state;
+  const station = { station_id, num_bikes_available, num_docks_available, last_reported };
   this.props.addStation(station);
   this.setState({
     station_id: '',
     num_bikes_available: '',
     num_docks_available: '',
-    last_updated: ''
+    last_reported: ''
   });
 };
 
   render() {
-    const { station_id, num_bikes_available, num_docks_available, last_updated } = this.state;
+    const { station_id, num_bikes_available, num_docks_available, last_reported } = this.state;
     return(
       <div className='card card-body mt-4 mb-4'>
         <h2>Add Station</h2>
@@ -71,9 +71,9 @@ onSubmit = e => {
             <input
               className='form-control'
               type='datetime-local'
-              name='last_updated'
+              name='last_reported'
               onChange={this.onChange}
-              value={last_updated}
+              value={last_reported}
               />
           </div>
           <div className='form-group'>
