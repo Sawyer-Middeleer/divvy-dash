@@ -1,12 +1,9 @@
-import pandas as pd
-import numpy as np
 import json
 import requests
 
-
 gbfs_resp = requests.get('https://gbfs.divvybikes.com/gbfs/fr/station_status.json')
-gbfs_text = gbfs_resp.text
+gbfs_json = json.loads(gbfs_resp.text)
 
-gbfs_json = json.loads(gbfs_text)
+divvy_stations = gbfs_json['data']['stations']
 
-gbfs_json
+divvy_stations[0]
